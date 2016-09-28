@@ -19,7 +19,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="82E91957-A7CD-4874-A1D3-CFA98321D531" translatesAutoresizingMaskIntoConstraints="NO" id="QzD-5P-9R6">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="734B365B-61CB-4E60-B283-1935B25152B8" translatesAutoresizingMaskIntoConstraints="NO" id="QzD-5P-9R6">
                                 <constraints>
                                     <constraint firstAttribute="height" constant="108" id="aN0-wX-o55"/>
                                     <constraint firstAttribute="width" constant="99" id="ang-Dn-Jqn"/>
@@ -155,12 +155,22 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="buyNowBtn" translatesAutoresizingMaskIntoConstraints="NO" id="Eop-Yq-uSA">
-                                <frame key="frameInset" minX="122" minY="655" width="170" height="49"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C9b-94-3uk">
+                                <frame key="frameInset" minX="110" minY="677" width="194" height="39"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="buyBtn" image="buyNowBtn"/>
+                                <connections>
+                                    <action selector="buyBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dpC-iz-VYV"/>
+                                </connections>
+                            </button>
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="successIndicator" translatesAutoresizingMaskIntoConstraints="NO" id="WTz-GE-6PI">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="Nkt-E2-NG8"/>
+                                    <constraint firstAttribute="width" constant="240" id="abc-CC-wTC"/>
+                                </constraints>
                             </imageView>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="5kh-pY-VXH" secondAttribute="bottom" constant="79" id="1Fi-51-NIO"/>
                             <constraint firstItem="ttH-Zx-iEO" firstAttribute="top" secondItem="ecZ-sP-nd7" secondAttribute="bottom" constant="7" id="3lL-jv-0sm"/>
@@ -173,6 +183,7 @@
                             <constraint firstItem="ecZ-sP-nd7" firstAttribute="trailing" secondItem="bVr-az-eAx" secondAttribute="trailing" id="Djg-Gp-UQp"/>
                             <constraint firstItem="bVr-az-eAx" firstAttribute="trailing" secondItem="w0f-EE-BrZ" secondAttribute="trailing" id="EWz-5V-KAI"/>
                             <constraint firstItem="5kh-pY-VXH" firstAttribute="trailing" secondItem="9gP-56-e8E" secondAttribute="trailing" id="IRn-H6-C7X"/>
+                            <constraint firstItem="WTz-GE-6PI" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="IbP-bj-Fto"/>
                             <constraint firstItem="8hL-su-oXj" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="20" id="L8X-Pj-0T5"/>
                             <constraint firstItem="wLA-4s-7sj" firstAttribute="top" secondItem="Dh5-eJ-4Nv" secondAttribute="bottom" constant="7" id="Mss-ga-fYz"/>
                             <constraint firstItem="8hL-su-oXj" firstAttribute="centerX" secondItem="U8J-Vn-Wak" secondAttribute="centerX" id="MtV-Tc-HFV"/>
@@ -206,18 +217,23 @@
                             <constraint firstItem="1WX-g9-A3J" firstAttribute="leading" secondItem="nQo-8s-5yf" secondAttribute="leading" id="uXv-2N-Rmx"/>
                             <constraint firstItem="1WX-g9-A3J" firstAttribute="top" secondItem="nQo-8s-5yf" secondAttribute="bottom" constant="7" id="uxi-5O-oGR"/>
                             <constraint firstItem="w0f-EE-BrZ" firstAttribute="leading" secondItem="wLA-4s-7sj" secondAttribute="leading" id="vbk-py-ZSb"/>
+                            <constraint firstItem="WTz-GE-6PI" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="wQm-Ca-Xwm"/>
                             <constraint firstItem="5kh-pY-VXH" firstAttribute="top" secondItem="9gP-56-e8E" secondAttribute="bottom" constant="7" id="x7R-hK-m2v"/>
                             <constraint firstItem="nQo-8s-5yf" firstAttribute="top" secondItem="ttH-Zx-iEO" secondAttribute="bottom" constant="13" id="xj8-oK-F5K"/>
                             <constraint firstItem="aMd-Ns-OWA" firstAttribute="centerX" secondItem="U8J-Vn-Wak" secondAttribute="centerX" id="zPe-5f-reW"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="butBtn" destination="C9b-94-3uk" id="Lc5-Zv-kJS"/>
                         <outlet property="countryLabel" destination="nQo-8s-5yf" id="WGE-n3-eUE"/>
                         <outlet property="countryType" destination="1WX-g9-A3J" id="e5W-eS-ksQ"/>
                         <outlet property="postalCodeLabel" destination="9gP-56-e8E" id="v4y-4k-Wyg"/>
                         <outlet property="postalCodeType" destination="5kh-pY-VXH" id="oH2-Ga-TE6"/>
                         <outlet property="provincePicker" destination="dyo-Sv-yzy" id="jQf-5o-zmG"/>
                         <outlet property="provincePickerBtn" destination="ttH-Zx-iEO" id="uq2-Jd-NZ0"/>
+                        <outlet property="successIcon" destination="WTz-GE-6PI" id="Qi0-dB-lvP"/>
+                        <outlet property="successView" destination="8bC-Xf-vdC" id="6pP-H1-QfX"/>
+                        <outlet property="view" destination="8bC-Xf-vdC" id="Mgw-35-DpD"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -226,7 +242,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="82E91957-A7CD-4874-A1D3-CFA98321D531" width="90" height="90">
+        <image name="734B365B-61CB-4E60-B283-1935B25152B8" width="90" height="90">
             <mutableData key="keyedArchiveRepresentation">
 YnBsaXN0MDDUAQIDBAUGPT5YJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGGoK4HCBMU
 GR4fIyQrLjE3OlUkbnVsbNUJCgsMDQ4PEBESVk5TU2l6ZVYkY2xhc3NcTlNJbWFnZUZsYWdzVk5TUmVw
@@ -818,5 +834,6 @@ iNKI1YjaAAAAAAAAAgEAAAAAAAAAQQAAAAAAAAAAAAAAAAAAiNw
 </mutableData>
         </image>
         <image name="buyNowBtn" width="225" height="45"/>
+        <image name="successIndicator" width="180" height="180"/>
     </resources>
 </document>

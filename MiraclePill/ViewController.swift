@@ -16,6 +16,10 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
     @IBOutlet weak var countryType: UITextField!
     @IBOutlet weak var postalCodeLabel: UILabel!
     @IBOutlet weak var postalCodeType: UITextField!
+    @IBOutlet weak var butBtn: UIButton!
+    @IBOutlet weak var hideView: UIView!
+    @IBOutlet var successView: UIView!
+    @IBOutlet weak var successIcon: UIImageView!
     
     let provinces = ["Alberta","British Columbia","Manitoba","New Brunswick","Newfoundland and Labrador","Northwest Territories","Nova Scotia","Nunavut","Ontario","Prince Edward Island","Quebec","Saskatchewan","Yukon"]
     
@@ -59,7 +63,13 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
         countryType.isHidden = false
         postalCodeLabel.isHidden = false
         postalCodeType.isHidden = false
+
         
     }
+    
+    @IBAction func buyBtnPressed(_ sender: AnyObject) {
+        successIcon.isHidden = false
+    }
+    
 }
 
